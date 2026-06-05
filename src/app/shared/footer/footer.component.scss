@@ -1,0 +1,163 @@
+/* ═══════════════════════════════════════════════
+   FOOTER  — white primary, orange / red / blue
+   ═══════════════════════════════════════════════ */
+
+.footer {
+  background: #ffffff;
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(90deg, #1a5fad 0%, #e8650a 50%, #c8233a 100%) 1;
+  color: #1c1c1e;
+}
+
+/* ── Top content band ── */
+.footer-top {
+  padding: 3.5rem 0 2.5rem;
+  background: #faf9f7;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+  gap: 2.5rem;
+}
+
+/* ── Brand / About column ── */
+.footer-logo {
+  display: flex; align-items: center; gap: 0.7rem; margin-bottom: 1rem;
+
+  .ieee-badge {
+    background: linear-gradient(135deg, #1a5fad, #2272cc);
+    color: #fff; font-family: 'Orbitron', monospace; font-weight: 900;
+    font-size: 0.8rem; padding: 0.32rem 0.6rem; border-radius: 5px;
+    letter-spacing: 1px; box-shadow: 0 2px 8px rgba(26,95,173,0.25);
+  }
+
+  span {
+    font-family: 'Orbitron', monospace; font-size: 0.95rem;
+    font-weight: 700; color: #1c1c1e;
+  }
+}
+
+.about p {
+  color: #5a5a6a; font-size: 0.875rem; line-height: 1.75;
+  font-family: 'Inter', sans-serif; margin-bottom: 1.25rem;
+}
+
+/* Social icons — orange on hover */
+.social-links {
+  display: flex; gap: 0.6rem;
+
+  a {
+    width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    background: #fff; border: 1.5px solid rgba(0,0,0,0.10);
+    border-radius: 8px; color: #5a5a6a;
+    text-decoration: none; font-size: 0.85rem; font-weight: 700;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #e8650a; border-color: #e8650a;
+      color: #fff; box-shadow: 0 3px 10px rgba(232,101,10,0.35);
+    }
+  }
+}
+
+/* ── Column headings ── */
+.footer-col h4 {
+  font-family: 'Orbitron', monospace; font-size: 0.68rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  color: #8a8a9a; margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, #e8650a, #c8233a) 1;
+  display: inline-block; width: 100%;
+}
+
+/* ── Quick links ── */
+.footer-col ul { list-style: none;
+  li { margin-bottom: 0.45rem; }
+  a {
+    color: #5a5a6a; text-decoration: none; font-size: 0.875rem;
+    font-family: 'Inter', sans-serif; transition: color 0.2s;
+    &:hover { color: #e8650a; }
+  }
+}
+
+/* ── Sponsors list ── */
+.sponsors li {
+  color: #5a5a6a; font-size: 0.84rem; margin-bottom: 0.45rem;
+  padding-left: 0.75rem; font-family: 'Inter', sans-serif;
+  border-left: 3px solid #1a5fad;
+}
+
+/* ── Conference ID chip ── */
+.conf-id {
+  margin-top: 1rem; padding: 0.6rem 1rem;
+  background: #fff; border: 1.5px solid rgba(26,95,173,0.22);
+  border-radius: 8px; display: flex; flex-direction: column;
+  box-shadow: 0 2px 8px rgba(26,95,173,0.08);
+
+  span {
+    font-size: 0.65rem; color: #8a8a9a;
+    text-transform: uppercase; letter-spacing: 1.2px;
+    font-family: 'Inter', sans-serif;
+  }
+  strong {
+    color: #1a5fad; font-family: 'Orbitron', monospace; font-size: 1.1rem;
+  }
+}
+
+/* ── Contact persons ── */
+.contact-persons p {
+  margin-bottom: 0.75rem; font-size: 0.84rem;
+  color: #5a5a6a; font-family: 'Inter', sans-serif;
+
+  strong { color: #1c1c1e; display: block; margin-bottom: 0.1rem; font-weight: 600; }
+  a { color: #e8650a; text-decoration: none; &:hover { text-decoration: underline; } }
+}
+
+.email-link {
+  display: inline-block; margin: 0.75rem 0;
+  color: #c8233a; font-size: 0.875rem;
+  font-family: 'Inter', sans-serif; font-weight: 500;
+  text-decoration: none;
+  &:hover { color: #9e1a2c; text-decoration: underline; }
+}
+
+.dept-info {
+  margin-top: 0.6rem;
+  small {
+    display: block; font-size: 0.75rem; color: #8a8a9a;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* ── Bottom bar ── */
+.footer-bottom {
+  background: #1c1c1e;
+  padding: 1.1rem 0;
+
+  .container {
+    display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 0.5rem;
+  }
+
+  p {
+    color: rgba(255,255,255,0.45); font-size: 0.78rem;
+    font-family: 'Inter', sans-serif;
+
+    /* colour stripe on first paragraph */
+    &:first-child span {
+      color: #e8650a; font-weight: 600;
+    }
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom .container { flex-direction: column; text-align: center; }
+}
